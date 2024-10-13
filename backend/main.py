@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+from utils import getCompleteSentece
 
 from openai import OpenAI
 
@@ -107,7 +108,8 @@ async def post_frame(data: ImageData):
 @app.get("/getTranslation")
 async def get_translation():
     print("request the translation")
-    return {"msg":"hello"}
+    msg = getCompleteSentece(word_buffer)
+    return {"msg":msg}
 
 @app.get("/clearBuffer")
 async def clear_buffer():

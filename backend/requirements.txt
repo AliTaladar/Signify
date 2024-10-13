@@ -1,2 +1,7 @@
-opencv-python==4.7.0.68
-scikit-learn==1.2.0
+opencv-python
+mediapipe
+scikit-learn
+openai
+fastapi
+uvicorn
+
