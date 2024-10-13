@@ -77,7 +77,8 @@ def process_image(image_path):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-process_image(f'data\\\\A\\\\0.jpg')
+process_image("test_A.png")
+process_image("test_B.png")
 
 # Clean up
 hands.close()
